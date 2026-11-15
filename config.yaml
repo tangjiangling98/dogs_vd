@@ -1,23 +1,17 @@
 # ===== Telegram 频道 -> 英文翻译 -> Buffer -> X 自动搬运 =====
 
 # 你关注的频道（不带 @）
-channel: "YMISH3333"
+channel: "pesiktg_sobaka"
 
 # 多频道列表：所有频道的内容都发到同一个 X 账号（publish.buffer.channel_id）
 #   lang   : zh = 中文原文，翻译成英文再发；en = 英文原文，直接发（或洗稿后发）
 #   rewrite: true = 用 LLM 洗稿（换一种表达，保持事实不变）；false = 不洗稿
 channels:
-  - name: "YMISH3333"
-    lang: "zh"
+  - name: "pesiktg_sobaka"
+    lang: "ru"
     rewrite: false
-  - name: "disaster_news"
-    lang: "en"
-    rewrite: false
-  - name: "xinwen4588"
-    lang: "zh"
-    rewrite: false
-  - name: "BREAKING_NEWS_TG"
-    lang: "en"
+  - name: "sobaki_pesik_sobaka"
+    lang: "ru"
     rewrite: false
 
 fetch:
@@ -47,7 +41,7 @@ publish:
     # 留空 = 自动在 Buffer 里找连着的 X 频道并缓存到 data/buffer_channel.json
     # 有多个 X 频道时，这里必须填（先跑 python run.py buffer-setup 看 id）
     organization_id: ""
-    channel_id: "6ae73010e29c69a17126cbf5"
+    channel_id: "6af99671ece6dfde5fd0ee52"
     # shareNow（立即发）| addToQueue（进 Buffer 队列的下一个空档）| customScheduled
     mode: "shareNow"
     # 同批次的第 2 条起，自动排到 60 分钟后再发（间隔至少 60 分钟）
