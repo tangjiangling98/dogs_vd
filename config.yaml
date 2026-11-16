@@ -98,6 +98,8 @@ cleanup:
   media_only: true
   # 新鲜度过滤：只发最近 N 小时内的帖子，超过的旧帖直接跳过（防止频道更新慢时补发旧闻）
   max_age_hours: 24
+  # 超过 max_per_cycle 的多余视频直接丢弃（不再留待后续）
+  drop_overflow: true
   remove_patterns:
     - '关注[^\n]*?频道[^\n]*'
     - '投稿\s*[:：]\s*@\w+'
